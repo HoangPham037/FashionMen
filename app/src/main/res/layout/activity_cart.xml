@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CartActivity">
+    <TextView
+        android:layout_below="@+id/toolbarCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giỏ hàng trống"
+        android:id="@+id/txtGioHangTrong"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFC107"
+        app:title="Giỏ hàng" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCart"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@+id/toolbarCart" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:weightSum="2"
+    android:id="@+id/layoutPrice"
+    android:layout_below="@+id/recyclerCart"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFC107"
+        android:text="Tổng tiền"/>
+    <TextView
+        android:layout_weight="1"
+        android:paddingTop="13dp"
+        android:gravity="right"
+        android:id="@+id/tvSumPrice"
+        android:textSize="20sp"
+        android:textColor="#FFC107"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="500000d"/>
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btnMuaHang"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/layoutPrice"
+        android:backgroundTint="#FFC107"
+        android:text="Mua hàng" />
+
+
+</RelativeLayout>

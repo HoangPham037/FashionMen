@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/backhome"
+        android:foreground="@drawable/lam_mo_bg"/>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:background="@color/black"
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="90dp"
+                android:fontFamily="@font/lobster"
+                android:text="Fashion Men"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/frameCartHome"
+                android:layout_width="55dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp">
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/menu_amountt"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="top|right" />
+
+                <ImageView
+                    android:id="@+id/imgCart"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_cart" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <EditText
+            android:textColorHint="@color/white"
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/border_edt"
+            android:drawableEnd="@drawable/ic_search"
+            android:hint="@string/search"
+            android:padding="10dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/slider_pager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/edtSearch"
+            android:layout_marginTop="-2dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/slider_pager"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_pager"
+            app:tabBackground="@drawable/indicator_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"></com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/indicator"
+            android:id="@+id/linear2"
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/list1"
+                    android:id="@+id/ao"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Áo"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/list2"
+                    android:id="@+id/quan"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quàn"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/prd3"
+                    android:id="@+id/cap"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mũ"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/prd5"
+                    android:id="@+id/mu"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cặp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPhoBien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear2"
+            android:layout_marginTop="5dp"
+            android:text="Phổ biến"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPhoBien" />
+
+        <TextView
+            android:id="@+id/tvMoicapNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler2"
+            android:layout_marginTop="5dp"
+            android:text="Mới Cập Nhập"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMoicapNhap" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fashion Men</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_maps">Maps</string>
+    <string name="nav_favorite">Yêu thích</string>
+    <string name="nav_user">Tài khoản</string>
+    <string name="nav_notification">Thông báo</string>
+    <string name="nav_account">Tài khoản</string>
+    <string name="nav_my_profile">Tài khoản của tôi</string>
+    <string name="nav_sig_out">Đăng xuất</string>
+    <string name="search">Tìm kiếm</string>
+
+    <string name="nav_drawer_open">Open navigation</string>
+    <string name="nav_drawer_close">Close navigation</string>
+    <string name="favorite_text">Yêu thích</string>
+</resources>
